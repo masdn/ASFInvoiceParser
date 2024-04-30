@@ -1,5 +1,7 @@
 module Main where
 
-import Gloss.
+import Graphics.Gloss
 main :: IO ()
-main = putStrLn "Hello, Haskell!"
+main = do
+    picture <- loadBMP "map.bmp"
+    display (InWindow "Pic" (1200, 800) (10, 10)) white picture
